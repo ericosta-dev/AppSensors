@@ -18,15 +18,15 @@ import com.example.appsensors.databinding.FragmentGyroscopeBinding
 
 class GyroscopeFragment : Fragment(), SensorEventListener {
 
-    lateinit var binding: FragmentGyroscopeBinding
+    lateinit var b: FragmentGyroscopeBinding
     private lateinit var sensorManager: SensorManager
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_gyroscope, container, false)
+        b = DataBindingUtil.inflate(inflater, R.layout.fragment_gyroscope, container, false)
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
 
         setUpSensorStuff()
-        return binding.root
+        return b.root
     }
 
     private fun setUpSensorStuff() {
@@ -49,11 +49,11 @@ class GyroscopeFragment : Fragment(), SensorEventListener {
     override fun onSensorChanged(event: SensorEvent?) {
         if(event?.sensor?.type == Sensor.TYPE_GYROSCOPE){
             var valueZ = event.values[2]
-            binding.txtValor.text = "Valor: ${valueZ}"
+            b.txtValor.text = "Valor: ${valueZ}"
             if(event.values[2] > 0.5f) { // anticlockwise
-                binding.txtSentido.text = "Anticlockwise"
+                b.txtSentido.text = "Anticlockwise"
             } else if(event.values[2] < -0.5f) { // clockwise
-                binding.txtSentido.text = "Clockwise"
+                b.txtSentido.text = "Clockwise"
             }
         }
     }

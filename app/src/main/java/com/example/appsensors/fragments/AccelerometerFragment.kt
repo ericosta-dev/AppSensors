@@ -56,10 +56,7 @@ class AccelerometerFragment : Fragment(), SensorEventListener  {
                 translationY = upDown * 10
             }
 
-            val color = if (upDown.toInt() == 0 && sides.toInt() == 0) Color.rgb(24,255,255) else Color.WHITE
-            b.tvSquare.setBackgroundColor(color)
-
-            b.tvSquare.text = "Subir/Descer: ${upDown.toInt()}\nEsquerda/Direita ${sides.toInt()}"
+            b.tvSquare.text = "Eixo X: ${upDown.toInt()}\nEixo Y ${sides.toInt()}"
 
         }
     }

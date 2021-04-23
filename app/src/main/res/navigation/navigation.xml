@@ -53,7 +53,7 @@
     <fragment
         android:id="@+id/gyroscopeFragment"
         android:name="com.example.appsensors.fragments.GyroscopeFragment"
-        android:label="GyroscopeFragment" >
+        android:label="GyroscopeFragment">
         <action
             android:id="@+id/action_gyroscopeFragment_to_homeFragment"
             app:destination="@id/homeFragment" />

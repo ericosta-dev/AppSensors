@@ -17,7 +17,6 @@ import androidx.fragment.app.Fragment
 import com.example.appsensors.R
 import com.example.appsensors.databinding.FragmentProximityBinding
 
-@Suppress("DEPRECATION")
 class ProximityFragment : Fragment(), SensorEventListener {
 
     lateinit var b: FragmentProximityBinding
@@ -53,9 +52,8 @@ class ProximityFragment : Fragment(), SensorEventListener {
 
             Log.i(TAG, "Distancia: $distance")
 
-            b.txtProximity.text = "Distancia = ${distance}";
-            val color = if(distance > 0) Color.BLUE else Color.GREEN
-            b.txtProximity.setBackgroundColor(color)
+            b.txtProximity.text = "Distancia = ${distance.toInt()}";
+
         }
     }
 
