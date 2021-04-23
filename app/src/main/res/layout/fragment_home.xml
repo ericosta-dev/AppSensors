@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/btnAccelerometer"
+            android:layout_width="175dp"
+            android:layout_height="wrap_content"
+            android:text="@string/accelerometer"
+            app:backgroundTint="#1ADCA5"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnProximity"
+            app:layout_constraintVertical_bias="0.069" />
+
+        <Button
+            android:id="@+id/btnProximity"
+            android:layout_width="175dp"
+            android:layout_height="wrap_content"
+            android:text="@string/proximity"
+            app:backgroundTint="#1ADCA5"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtHome"
+            app:layout_constraintVertical_bias="0.173" />
+
+        <Button
+            android:id="@+id/btnLight"
+            android:layout_width="175dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/light"
+            app:backgroundTint="#1ADCA5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnAccelerometer" />
+
+        <Button
+            android:id="@+id/btnGyroscope"
+            android:layout_width="175dp"
+            android:layout_height="wrap_content"
+            android:text="@string/gyroscope"
+            app:backgroundTint="#1ADCA5"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnLight"
+            app:layout_constraintVertical_bias="0.126" />
+
+        <TextView
+            android:id="@+id/txtHome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="176dp"
+            android:fontFamily="monospace"
+            android:text="@string/txtSensors"
+            android:textSize="25sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
